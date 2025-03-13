@@ -8,21 +8,20 @@ export const typeDefs = gql`
 
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
-    "Id of the track"
     id: ID!
-    "Track title"
+    "The track's title"
     title: String!
-    "Author of the track"
+    "The track's main author"
     author: Author!
-    "Associated thumbnails of a given track"
+    "The track's main illustration to display in track card or track page detail"
     thumbnail: String
-    "The length of the track as a number"
+    "The track's approximate length to complete, in minutes"
     length: Int
-    "The numeric amount of modules in the track"
+    "The number of modules this track contains"
     modulesCount: Int
   }
 
-  "Author of a complete Track or a Module"
+  "Author of a complete Track"
   type Author {
     id: ID!
     "Author's first and last name"
